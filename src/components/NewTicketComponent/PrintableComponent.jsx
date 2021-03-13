@@ -24,10 +24,12 @@ function PrintableComponent() {
                     content={() => componentRef.current}
       />
       <div  ref={componentRef}>
-        <h1 className="font-extrabold text-sm">VN:{user.vehicleNumber.toUpperCase()}</h1>
-        <h1 className="font-extrabold text-sm">Adv:{user.amount}</h1>
-        <h1 className="font-extrabold text-sm">{user.companyName}</h1>
-        <h1 className="font-extrabold text-sm">{user.gst}</h1>
+        <center>
+          <h1 className="text-xs">{user.companyName}</h1>
+          <h1 className="text-xs">{user.gst}</h1>
+          <h1 className="text-xs">VehicleNo:{user.vehicleNumber.toUpperCase()}</h1>
+          <h1 className="text-xs">Advance: ₹ {user.amount}</h1>
+        </center>
       </div>
         <button onClick={donePrinting} className="mx-auto mb-4 px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform rounded-lg shadow-xl bg-gradient-to-r from-green-700 hover:from-green-600 to-green-600 hover:to-green-700 focus:ring focus:outline-none">DONE</button>
     </div>
